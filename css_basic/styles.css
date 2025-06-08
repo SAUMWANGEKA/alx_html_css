@@ -1,1 +1,31 @@
+/* Make body and main flex containers */
+body {
+  display: flex;
+  flex-direction: column; /* stack header, main, footer vertically */
+  height: 100vh; /* make body full viewport height */
+  margin: 0; /* remove default margin */
+}
+
+main {
+  display: flex;
+  flex-direction: row; /* place article and aside side by side */
+  flex: auto; /* allow main to grow and fill available space */
+  height: auto;
+}
+
+/* article takes 2/3 of width */
+article {
+  flex: 2;
+  overflow-y: auto; /* enable vertical scrolling */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* aside takes 1/3 of width */
+aside {
+  flex: 1;
+  overflow-y: auto; /* enable vertical scrolling */
+  padding: 10px;
+  box-sizing: border-box;
+}
 
