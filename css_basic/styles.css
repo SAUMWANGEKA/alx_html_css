@@ -1,31 +1,118 @@
-/* Make body and main flex containers */
+/* Logo styling */
+.logo {
+  font-size: 2rem;
+  padding-right: 10px;
+  user-select: none;
+}
+
+/* Body & basic styles */
 body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column; /* stack header, main, footer vertically */
-  height: 100vh; /* make body full viewport height */
-  margin: 0; /* remove default margin */
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+/* Flexbox containers */
 main {
+  flex: auto;
   display: flex;
-  flex-direction: row; /* place article and aside side by side */
-  flex: auto; /* allow main to grow and fill available space */
-  height: auto;
+  flex-direction: row;
+  padding: 20px;
+  gap: 20px;
 }
 
-/* article takes 2/3 of width */
 article {
   flex: 2;
-  overflow-y: auto; /* enable vertical scrolling */
-  padding: 10px;
-  box-sizing: border-box;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  overflow-y: auto;
 }
 
-/* aside takes 1/3 of width */
 aside {
   flex: 1;
-  overflow-y: auto; /* enable vertical scrolling */
-  padding: 10px;
-  box-sizing: border-box;
+  background: #e9eff5;
+  padding: 15px;
+  border-radius: 8px;
+  font-style: italic;
+  color: #555;
+  overflow-y: auto;
 }
 
+/* Header styles */
+header {
+  background-color: #0077cc;
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 700;
+}
+
+header p {
+  margin: 5px 0 15px 0;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* Projects styling */
+.project {
+  margin-bottom: 15px;
+}
+
+.project h3 {
+  margin-top: 0;
+  color: #0077cc;
+}
+
+.project a {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+.project a:hover {
+  color: #004a80;
+}
+
+/* Footer */
+footer {
+  background: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 0.9rem;
+  user-select: none;
+}
